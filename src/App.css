@@ -1,0 +1,167 @@
+/* Make body fill the viewport and set dark theme */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Main container centers all content */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Changed from flex-start to center */
+  min-height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box; /* Ensures padding is included in height */
+}
+
+/* Header with navigation links */
+header {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  text-align: center; /* Center text in header */
+}
+
+header nav a {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: #ccc;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Card styling for forms - now properly centered */
+.card {
+  width: 100%;
+  max-width: 500px;
+  background: #333;
+  color: #eee;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.6);
+  margin: 1rem auto; /* Changed to auto for horizontal centering */
+}
+
+/* Form elements styling */
+input, textarea, button {
+  display: block;
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #444;
+  background-color: #555;
+  color: #fff;
+  transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+  border-color: #ffa500;
+  outline: none;
+}
+
+/* Button styling */
+button {
+  cursor: pointer;
+  background-color: #ffa500;
+  color: #222;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #ffbd33;
+  transform: translateY(-2px);
+}
+
+/* JSON response output */
+pre.response {
+  background: #2c2c2c;
+  padding: 1rem;
+  overflow-x: auto;
+  margin-top: 1rem;
+  border-radius: 5px;
+  color: #dddddd;
+  width: 100%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+.results-table {
+  overflow-x: auto;
+  width: 100%;
+  margin-top: 1rem;
+  background-color: #2c2c2c;
+  border-radius: 8px;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+
+.results-table-inner {
+  min-width: 1200px;     /* Forces horizontal scroll for lots of columns */
+  border-collapse: collapse;
+}
+
+.results-table-inner th,
+.results-table-inner td {
+  border: 1px solid #66f07b;
+  padding: 0.5rem;
+  vertical-align: top;
+  text-align: left;
+  min-width: 150px;      /* Minimum width for columns */
+  max-width: 300px;      /* Prevent super-wide cells */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  background-color: #2c2c2c;
+  color: #f0f0f0;
+}
+
+.results-table-inner th {
+  background-color: #d8e752;
+  color: #222;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+/* Sticky first column */
+.results-table-inner th:first-child,
+.results-table-inner td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 4;
+  background-color: #d8e752;
+  color: #222;
+}
+
+.sticky-column {
+  position: sticky;
+  left: 0;
+  background-color: #d8e752 !important;
+  color: #222;
+  z-index: 4;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+}
