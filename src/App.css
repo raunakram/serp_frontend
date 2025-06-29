@@ -165,3 +165,18 @@ pre.response {
   z-index: 4;
   box-shadow: 2px 0 5px rgba(0,0,0,0.3);
 }
+
+
+.logout-button {
+  background: none;
+  border: none;
+  color: #ccc;
+  cursor: pointer;
+  padding: 0;
+  font: inherit;
+  text-decoration: underline;
+}
+
+.logout-button:hover {
+  color: #fff;
+}
