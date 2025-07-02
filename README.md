@@ -18,7 +18,7 @@ It connects to the Django REST API to:
 ```bash
 cd serp_project_frontend
 
-2️⃣ Install dependencies:
+2️⃣ Install dependencies:ffff
 
 npm install
 
